@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azmat Marketing Solution</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1 class="fade-in">Welcome To Azmat Marketing Solution</h1>
+        <p class="fade-in" style="animation-delay: 0.5s;">We handle campaigns for UK, USA, Canada</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- CAMPAIGNS -->
+    <section id="campaigns">
+        <h2>Campaigns</h2>
+        <ul>
+            <li class="slide-in">UK</li>
+            <li class="slide-in" style="animation-delay: 0.2s;">USA</li>
+            <li class="slide-in" style="animation-delay: 0.4s;">Canada</li>
+        </ul>
+    </section>
+
+    <!-- LIVE CHAT -->
+    <section id="live-chat">
+        <h2>Live Chat</h2>
+        <a href="https://wa.me/92122434114" target="_blank">
+            <button class="chat-btn">💬 Chat on WhatsApp</button>
+        </a>
+    </section>
+
+    <!-- MEDIA SECTION -->
+    <section id="media-section" class="media-animate">
+        <div class="media-container">
+
+            <div class="media-video">
+                <video controls>
+                    <source src="../images/client-video.mp4" type="video/mp4">
+                    Your browser does not support video.
+                </video>
+            </div>
+
+            <div class="media-images">
+                <img src="../images/pic1.jpg" alt="Picture 1">
+                <img src="../images/pic2.jpg" alt="Picture 2">
+                <img src="../images/pic3.jpg" alt="Picture 3">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COUNTRY → JOB → CV UPLOAD -->
+    <section style="padding: 20px;">
+        <h2>Select Country → Job → Upload CV</h2>
+
+        <div class="box">
+            <label>Select Country:</label><br>
+            <select id="country" onchange="showJob()">
+                <option value="">-- Choose --</option>
+                <option value="uk">United Kingdom (UK)</option>
+                <option value="usa">USA</option>
+                <option value="uae">UAE</option>
+            </select>
+        </div>
+
+        <div class="box hidden" id="jobBox">
+            <!-- <label>Select Job:</label> -->
+            <!-- <p id="jobDesc">Please send a job .</p>  -->
+            <button onclick="showUpload()">Customer Care Representative</button>
+        </div>
+
+        <div class="box hidden" id="uploadBox">
+            <label>Upload Your CV:</label><br>
+            <input type="file" />
+        </div>
+    </section>
+
+    <script src="../js/script.js"></script>
+
+    <script>
+        function showJob() {
+            const country = document.getElementById('country').value;
+            const jobBox = document.getElementById('jobBox');
+
+            if (country === 'uk') {
+                jobBox.classList.remove('hidden');
+            } else {
+                jobBox.classList.add('hidden');
+            }
+        }
+
+        function showUpload() {
+            document.getElementById('uploadBox').classList.remove('hidden');
+        }
+    </script>
+    <!-- JOB FLOW -->
+    <!-- <section id="job-flow" class="flow-box">
+        <h2>Select Country → Job → Upload CV</h2> -->
+
+    <!-- COUNTRY -->
+    <!-- <div class="box">
+            <label>Select Country:</label><br>
+            <select id="country" onchange="showJob()">
+                <option value="">-- Choose --</option>
+                <option value="uk">United Kingdom (UK)</option>
+                <option value="usa">USA</option>
+                <option value="uae">UAE</option>
+            </select>
+        </div> -->
+
+    <!-- JOB BUTTON (HDDEN FIRST) -->
+    <!-- <div class="box hidden" id="jobBox">
+            <label>Select Job:</label><br>
+            <button class="job-btn" onclick="showUpload()">Customer Care Representative</button>
+        </div> -->
+
+    <!-- CV UPLOAD (HIDDEN FIRST) -->
+    <!-- <div class="box hidden" id="uploadBox">
+            <label>Upload Your CV:</label><br>
+            <input type="file" />
+        </div>
+    </section> -->
+
+</body>
+
+</html>

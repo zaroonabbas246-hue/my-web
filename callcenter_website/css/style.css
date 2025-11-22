@@ -1,0 +1,194 @@
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in campaigns */
+.slide-in {
+    opacity: 0;
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Button hover */
+button:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+/* Live chat pulse */
+#live-chat button {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Section padding */
+section {
+    padding: 20px;
+    text-align: center;
+}
+#media-section {
+    margin: 40px auto;
+    width: 90%;
+}
+
+.media-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* VIDEO */
+.media-video video {
+    width: 450px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+/* IMAGES STACK */
+.media-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.media-images img {
+    width: 250px;
+    border-radius: 10px;
+}
+/* ANIMATION KEYFRAMES */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ANIMATION FOR SECTION */
+.media-animate .media-video,
+.media-animate .media-images img {
+    opacity: 0;
+    animation: fadeSlideUp 0.8s ease-out forwards;
+}
+
+/* VIDEO animation delay */
+.media-animate .media-video {
+    animation-delay: 0.1s;
+}
+
+/* IMAGE animation delays */
+.media-animate .media-images img:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.media-animate .media-images img:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.media-animate .media-images img:nth-child(3) {
+    animation-delay: 0.7s;
+}
+/* Modern Background */
+body {
+    background: linear-gradient(135deg, #0f0f3d, #1a1a4d, #111133);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Flow Box Styling */
+.flow-box {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    margin: 60px auto;
+    width: 60%;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Buttons */
+.job-btn {
+    background: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 106px;
+    transition: 0.2s;
+}
+
+.job-btn:hover {
+    background: #0055cc;
+    transform: scale(1.05);
+}
+
+/* Inputs */
+select, input[type="file"] {
+    padding: 10px;
+    margin-top: 10px;
+    width: 250px;
+    border-radius: 6px;
+    border: none;
+}
